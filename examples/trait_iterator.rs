@@ -31,13 +31,17 @@ fn main() {
         println!("counter: {}", i);
     }
 }
-#[rustfmt::skip]
+
 #[allow(unused)]
 fn iter_ways() {
-    // 不同的迭代方式
-    for _ in (0..).take(10)             {}         // 范围 等价于 (0..i32::MAX).take(10)
-    for _ in (0..i32::MAX).take(10)     {}
-    for _ in (0..2147483647).take(10)   {}
-    for _ in [0; 10]                    {}         // 初始值全 0 数组
-    for _ in [0..10]                    {}         // 范围数组
+
+    #[rustfmt::skip]
+    fn iterways() {
+        // 不同的迭代方式
+        for _ in (0..).take(10)             {}         // 范围 等价于 (0..i32::MAX).take(10)
+        for _ in (0..i32::MAX).take(10)     {}
+        for _ in (0..2147483647).take(10)   {}
+        for _ in [0; 10]                    {}         // 初始值全 0 数组
+        for _ in [0..10]                    {}         // 范围数组
+    }
 }

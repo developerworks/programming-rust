@@ -33,6 +33,7 @@ fn main() {
     let order1 = Order::default();
     let order2 = Order {
         id: 100,
+        // 解构更新语法
         ..Order::default()
     };
     println!("order1 = {:?}", order1);
