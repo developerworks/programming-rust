@@ -8,4 +8,5 @@ edition = "2021"
 [dependencies]
 mime = "0.3.16"
 rand = "0.8.5"
+snafu = { version = "0.7.0", features = ["guide", "backtrace", "backtraces", "futures"] }
 thiserror = "1.0.30"
